@@ -1,0 +1,256 @@
+{% extends 'dependencies.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- banner part start-->
+<section class="banner_part">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="banner_slider owl-carousel">
+                    <div class="single_banner_slider">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-8">
+                                <div class="banner_text">
+                                    <div class="banner_text_iner">
+                                        <h1>Fresh & Healthy Vegetable</h1>
+                                        <!--<p>Get fresh Vegetable from our farm</p>-->
+                                        <a href="{% url 'productList' %}" class="btn_2">buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="banner_img d-none d-lg-block">
+                                <img src="slider-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_banner_slider">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-8">
+                                <div class="banner_text">
+                                    <div class="banner_text_iner">
+                                        <h1>Fresh & Healthy fruits</h1>
+                                        <!--<p>Get fresh fruits from our farm</p>-->
+                                        <a href="{% url 'productList' %}" class="btn_2">buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="banner_img d-none d-lg-block">
+                                <img src="slider-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_banner_slider">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-8">
+                                <div class="banner_text">
+                                    <div class="banner_text_iner">
+                                        <h1>Best Quality Of Grain</h1>
+                                        <a href="{% url 'productList' %}" class="btn_2">buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="banner_img d-none d-lg-block">
+                                <img src="slider-3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="single_banner_slider">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-8">
+                                    <div class="banner_text">
+                                        <div class="banner_text_iner">
+                                            <h1>Cloth $ Wood Sofa</h1>
+                                            <a href="#" class="btn_2">buy now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="banner_img d-none d-lg-block">
+                                    <img src="{% static '/img/banner_img.png' %}"alt="">
+                                </div>
+                            </div>
+                        </div> -->
+                </div>
+                <!--<div class="slider-counter"></div>-->
+            </div>
+        </div>
+    </div>
+</section>
+<div>
+    <section class="product_list section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                        <h2>Recommended items</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product_list_slider owl-carousel">
+                        <div class="single_product_list_slider">
+                            <div class="row align-items-center justify-content-between">
+                                {% for p in products%}
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="{{p.image.url}}" alt="{{p.name}}">
+                                        <div class="single_product_text">
+                                            <h4>{{p.name}}</h4>
+                                            <p>{{p.description}}</p>
+                                            <h3>₹{{p.price}}</h3>
+                                            <a href="#" data-item-id="{{p.id}}" data-item-price="{{p.price}}"
+                                                data-item-description="{{p.description}}"
+                                                data-item-image="{{p.image.url}}"
+                                                data-item-name="{{p.name}}" class="add_cart snipcart-add-item">+
+                                                add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #ecfdff"
+            >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Agri Shop
+              </h6>
+              <p>
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+              <p>
+                <a class="text-white">MDBootstrap</a>
+              </p>
+              <p>
+                <a class="text-white">MDWordPress</a>
+              </p>
+              <p>
+                <a class="text-white">BrandFlow</a>
+              </p>
+              <p>
+                <a class="text-white">Bootstrap Angular</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p><i class="fas fa-home mr-3"></i>Ahemdabad, India</p>
+              <p><i class="fas fa-envelope mr-3"></i> yj@mojaave.com</p>
+              <p><i class="fas fa-phone mr-3"></i> + 91 97147 67192</p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+  
+              <!-- Facebook -->
+              <a
+                 class="btn btn-primary btn-floating m-1"
+                 style="background-color: #3b5998"
+                 href="#!"
+                 role="button"
+                 ><i class="fab fa-facebook-f"></i
+                ></a>
+  
+              <!-- Twitter -->
+              <a
+                 class="btn btn-primary btn-floating m-1"
+                 style="background-color: #55acee"
+                 href="#!"
+                 role="button"
+                 ><i class="fab fa-twitter"></i
+                ></a>
+  
+              <!-- Google -->
+              <a
+                 class="btn btn-primary btn-floating m-1"
+                 style="background-color: #dd4b39"
+                 href="#!"
+                 role="button"
+                 ><i class="fab fa-google"></i
+                ></a>
+  
+              <!-- Instagram -->
+              <a
+                 class="btn btn-primary btn-floating m-1"
+                 style="background-color: #ac2bac"
+                 href="#!"
+                 role="button"
+                 ><i class="fab fa-instagram"></i
+                ></a>
+  
+              <!-- Linkedin -->
+              <a
+                 class="btn btn-primary btn-floating m-1"
+                 style="background-color: #0082ca"
+                 href="#!"
+                 role="button"
+                 ><i class="fab fa-linkedin-in"></i
+                ></a>
+              <!-- Github -->
+              <a
+                 class="btn btn-primary btn-floating m-1"
+                 style="background-color: #333333"
+                 href="#!"
+                 role="button"
+                 ><i class="fab fa-github"></i
+                ></a>
+            </div>
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <!--<div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+           >MDBootstrap.com</a
+          >
+      </div>-->
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+{% endblock %}

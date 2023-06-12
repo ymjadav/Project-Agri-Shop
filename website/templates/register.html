@@ -1,0 +1,49 @@
+{% extends 'dependencies.html' %}
+{% load static%}
+{% block content %}
+
+<section class="login_part padding_top">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_text text-center">
+                    <div class="login_part_text_iner">
+                        <a href="#" class="btn_3">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_form">
+                    <div class="login_part_form_iner">
+                        <h3>Please Sign up now</h3>
+                        <form class="row" action="" method="post">
+                            {% csrf_token %}
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text" class="form-control" id="name" name="name" value=""
+                                    placeholder="Name">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text" class="form-control" id="id_username" name="username" value=""
+                                    placeholder="Username">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="password" class="form-control" id="password" name="password1" value=""
+                                    placeholder="Password">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="password" class="form-control" id="password" name="password2" value=""
+                                    placeholder="Confirm Password">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <button type="submit" value="submit" class="btn_3">
+                                    Sign up
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% load static %}
+<html>
+
+<head>
+    <title>
+        www.Agrishop.com
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>aranoz</title>
+    <link rel="icon" href="img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static '/css/animate.css' %}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static '/css/owl.carousel.min.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static '/css/all.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static '/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static '/css/themify-icons.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static '/css/magnific-popup.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static '/css/slick.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    {% block content %}
+    {% endblock %}
+    <br>
+
+
+     <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="{% static '/js/jquery-1.12.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="{% static '/js/popper.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <!-- easing js -->
+    <script src="{% static '/js/jquery.magnific-popup.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static '/js/swiper.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static '/js/masonry.pkgd.js' %}"></script>
+    <!-- particles js -->
+    <script src="{% static '/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static '/js/jquery.nice-select.min.js' %}"></script>
+    <!-- slick js -->
+    <script src="{% static '/js/slick.min.js' %}"></script>
+    <script src="{% static '/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static '/js/waypoints.min.js' %}"></script>
+    <script src="{% static '/js/contact.js' %}"></script>
+    <script src="{% static '/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static '/js/jquery.form.js' %}"></script>
+    <script src="{% static '/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static '/js/mail-script.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static '/js/custom.js' %}"></script>
+
+    <script>
+        window.SnipcartSettings = {
+          publicApiKey: "OGJlZDcxNzMtYTkwNy00Zjc1LTkzNzYtMzU0YzhiOWRkNDE5NjM4MjIxMDg5OTI3MzA5MDk1",
+          loadStrategy: "on-user-interaction",
+          modalStyle: "side",
+          currency: "inr"
+        };
+      
+        (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+      </script>     
+</body>
+
+</html>
